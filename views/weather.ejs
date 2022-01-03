@@ -1,0 +1,20 @@
+<div class="card border-light">
+    <div class="card-header">
+        <h2>Weather</h2>
+    </div>
+    <div class="card-body">
+        <h4><%=weather.location%></h4>
+        <img style="text-align: end" class="text-end" src="<%=weather.icon_url%>" alt="">
+        <p>Temperature: <strong><%=weather.temp_c%></strong>°C</p>
+        <p>Feels like: <strong> <%=weather.feels_like_c%></strong>°C</p>
+        <p>Humidity: <strong> <%=weather.humidity%></strong>%</p>
+        <% if (weather.cloud){%>
+        <p>Cloud Coverage: <strong> <%=weather.cloud%></strong>%</p>
+        <%}%>
+        <p>Condition: <strong> <%=weather.condition%></strong></p>
+        <p>Wind Speed: <strong><%=weather.wind_mph%></strong>  MPH</p>
+        <p>Wind Direction: <strong> <%=weather.wind_direction%></strong></p>
+    </div>
+</div>
+
+

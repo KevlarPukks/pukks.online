@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--[if lte 8]><html class="pre-ie9" lang="en"><![endif]-->
+<!--[if gte IE 9]><!--><html lang="en"><!--<![endif]-->
+<%- include('head',title)%>
+<body>
+<div id="loader"></div>
+
+<div class="container">
+    <h1 class="display-1 text-center"><%=title%></h1>
+    <div class="row">
+
+        <div class="col-md-2">
+            <%-include('weather',weather) %>
+        </div>
+        <div class="col-md-3 manu">
+            <div id="fs-upcoming"></div>
+            <script>
+                (function (w,d,s,o,f,js,fjs) { w['fsUpcomingEmbed']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };
+                    js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
+                    js.id = o; js.src = f;
+                    js.async = 1;
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(window, document, 'script', 'fsUpcoming', 'https://cdn.footystats.org/embeds/upcoming.js'));
+                fsUpcoming('params', { teamID: 149 });
+            </script>
+            <iframe src="https://footystats.org/api/club?id=149" height="100%" width="100%" style="height:420px; width:100%;" frameborder="0"></iframe>
+        </div>
+        <div class="col-md-3 manu">
+            <div id="fs-standings"></div>
+            <script>
+                (function (w,d,s,o,f,js,fjs) { w['fsStandingsEmbed']=o;
+                    w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };
+                    js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
+                    js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);
+                }(window, document, 'script', 'mw', 'https://cdn.footystats.org/embeds/standings.js'));
+                mw('params', { leagueID: 6135});
+            </script>
+        </div>
+        <div class="col-md-4 manu">
+            <%-include('joke',jokes) %>
+        </div>
+        <div class="col-sm-3">
+
+        </div>
+        </div>
+
+</div>
+
+
+<style>.embed,.fs-embed-wrapper,.fs-upcoming-wrapper{
+
+
+        color: black;
+    }
+    .manu{
+        background-color: black;
+    }
+</style>
+<%- include('foot')%>
+</body>
+</html>
+
+
+
+<!--<script>-->
+
+<!--    // fetch('api/jokes')-->
+<!--    //     .then(response => response.json())-->
+<!--    //     .then(data => console.log(data));-->
+<!--</script>-->

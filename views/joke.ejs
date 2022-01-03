@@ -1,0 +1,26 @@
+
+<div class="card border-light">
+    <div class="card-header">
+    <h2 class="text-center">Joke</h2>
+    </div>
+<% jokes.forEach(function (joke) {%>
+    <div class="card-body">
+    <h5> <%=joke.title %></h5>
+    <div class=" collapse"  id="joke-body">
+
+
+
+        <p><%=joke.body%></p>
+        <a href="" class="btn">More Jokes</a>
+    </div></div>
+    <div class="card-footer">
+        <a  data-bs-toggle="collapse" href="#joke-body" aria-expanded="false" aria-controls="joke-body" class="btn">Read More</a>
+    </div>
+
+<%});%>
+
+</div>
+
+<script>
+
+</script>

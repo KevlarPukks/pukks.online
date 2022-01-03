@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: SpaceMono-Bold
+font link: https://fonts.google.com/specimen/Space+Mono
+font author: Colophon
+font author site: https://www.colophon-foundry.org/
+
+
+icon designer: Chris
+icon designer link: /chrisnic
+        
+{"bg":"#0B345A","icon":"#22C4D6","font":"#22C4D6","slogan":"#36d8ea"}
+      
